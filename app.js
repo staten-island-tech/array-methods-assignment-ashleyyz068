@@ -2,7 +2,7 @@ const deserts = [
     {
         desertName: "macarons",
         countryOrigin: "France",
-        baked: true, 
+        baked: true,
         price: 2,
         storesSold: ["I Love Macarons", "Macaron World", "Macaron Majesty"],
         posFlavors: ["chocolate", "pastascho"]
@@ -10,7 +10,7 @@ const deserts = [
     {
         desertName: "icecream",
         countryOrigin: "China",
-        baked: false, 
+        baked: false,
         price: 1,
         storesSold: ["Sprinkle City", "Swirls 'n Smiles", "Scooplicity"],
         posFlavors: ["cookie dough", "vanilla"]
@@ -18,7 +18,7 @@ const deserts = [
     {
         desertName: "jello",
         countryOrigin: "New York",
-        baked: false, 
+        baked: false,
         price: 0.50,
         storesSold: ["target", "walmart", "keyfoods"],
         posFlavors: ["cherry", "cheesecake"]
@@ -26,12 +26,18 @@ const deserts = [
     {
         desertName: "churros",
         countryOrigin: "Spain",
-        baked: false, 
+        baked: false,
         price: 1,
         storesSold: ["Churro-ville", "Churro Palace", "Sweet churros"],
         posFlavors: ["Lava cake", "chocolate"]
     }
 ]
 
-const names = deserts.filter((desert)=> desert.desertName); 
-console.log(names)
+deserts.forEach((desert) => {
+    console.log(desert.desertName);
+});
+deserts.forEach((desert) => {
+    console.log(desert.storesSold);
+});
+const bakedDesserts = deserts.filter(desert => desert.baked === true);
+console.log(bakedDesserts);
